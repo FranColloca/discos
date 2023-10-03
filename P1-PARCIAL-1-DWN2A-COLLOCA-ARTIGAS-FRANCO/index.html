@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="music.png" type="image/x-icon">
+  <title>Mi Discografica</title>
+</head>
+
+<body>
+  <header>
+    <h1>Programación I | Parcial 1 | Colloca Artigas, Franco</h1>
+  </header>
+  <main>
+    <h2>Mis discos</h2>
+    <div class="container">
+      <button id="cargarDiscoBtn" class="btn-green">Cargar Disco</button>
+      <button id="verDiscografiaBtn" class="btn-blue">Ver Discografía</button>
+    </div>
+
+    <!-- Modal para cargar discos -->
+    <div id="cargarDiscoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Cargar Disco</h2>
+        <form id="cargarDiscoForm">
+          <label for="img">Portada del disco</label>
+          <input type="file" id="img" class="input-file" required>
+          <label for="nombre">Nombre del Disco:</label>
+          <input type="text" id="nombre" class="input-field" required>
+          <label for="artista">Artista:</label>
+          <input type="text" id="artista" class="input-field" required>
+          <label for="nunico">Código numérico único del disco:</label>
+          <input type="number" id="nunico" class="input-field" required>
+          <div id="cancion-duracion" class="cancion-duracion">
+            <div id="cancio" class="cancio">
+              <label for="canciones">Canciones:</label>
+              <input type="text" id="canciones" class="input-field cancion" required>
+            </div>
+            <div id="duracio" class="duracio">
+              <label for="duracion">Duración:</label>
+              <input type="number" id="duraciones" class="input-field duracion" required>
+            </div>
+          </div>
+        </form>
+        <button type="button" id="agregarCancionBtn" class="btn btn-green">Agregar Canción</button>
+        <button type="button" id="guardarDisco" class="btn btn-green">Guardar</button>
+      </div>
+    </div>
+
+    <!-- Modal para ver discografía -->
+    <div id="verDiscografiaModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Discografía</h2>
+        <div id="discografia" class="discografia-list">
+          <!-- Aquí se muestran los discos guardados -->
+
+        </div>
+        <button id="agregarDiscoBtn" class="btn btn-blue">Agregar Disco</button>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <ul>
+      <li>Alumno Franco Colloca Artigas</li>
+      <li>
+        <a href="mailto:franco.colloca@davinci.edu.ar" target="_blank">franco.colloca@davinci.edu.ar</a>
+      </li>
+      <li>Programación 1</li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
